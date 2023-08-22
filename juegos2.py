@@ -1,14 +1,16 @@
-    import ahorcado
-    import adivinanza
-    print('========================================')
-    print('Elija su juego')
-    print('========================================')
-    print ("(1)Horca  (2)Adivinanza")
+import ahorcado 
+import adivinanza
 
-    juego= int (input("¿Cual juego?"))
+print('========================================')
+print('Elija su juego')
+print('========================================')
 
-    if(juego==1):
-        print("jugando horca")
-    elif(juego==2):
-        print ("jugando adivinanza")
-        jugar_adivinanza()
+print ('(1) ahorcado (2) adivinanza')
+juego = int(input('cual juego?'))
+
+if(juego ==1):
+    print('Juego ahorcado')
+    ahorcado.jugar_ahorcado()
+elif(juego ==2):
+    print('Juego adivinaza')
+    adivinanza.jugar_adivinanza()
