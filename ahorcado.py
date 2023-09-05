@@ -1,17 +1,29 @@
 def jugar():
-  print('================================')
-  print('Bienvenido al Juego del Ahorcado')
-  print('================================')
-  
-  palabra_secreta = 'mandarina'
+    print('================================')
+    print('Bienvenido al Juego del Ahorcado')
+    print('================================')
 
-  ahorcado = false
-  acerto = false
+    palabra_secreta='mandarina'
+    letras_acertadas=['','','','','','','','','_',]
 
-  while(not ahorcado and not acerto):
-        print("jugando...")
+    ahorcado = False
+    acerto = False
 
-  print("Fin del Juego")
+    while(not ahorcado and not acerto):
+        entrada = input ('ingrese una letra...')
+        entrada = entrada.strip()       #elimina espacios en blanco a la izquierda y derecha
+        entrada = entrada.lower()       #convierte a letras minusculas
+        indice = 0 
+        for letra in palabra_secreta:
+            if(entrada==letra):
+                letras_acertadas[indice]=letra
+                #print('Se encontro la letra {} en la posicion {}'.format(letra, indice))
+                
+            indice = indice + 1
+        print(letras_acertadas)
+
+    print("Fin del Juego")
     
-if(__name__=="__main__"):
-    jugar()    
+if(__name__=='__main__'):
+    
+    jugar()   
