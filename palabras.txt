@@ -1,2 +1,4 @@
-platanoduraznofrutilla
+platano
+durazno
+frutilla
 manzana
